@@ -669,7 +669,7 @@ BoldItalicFont=*-SemiBoldItalic,
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
-	\vspace{-1.0mm}
+	\vspace{-0.55mm}
 	\setlength\tabcolsep{0pt}
 	\setlength{\extrarowheight}{0pt}
 	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
@@ -685,7 +685,7 @@ BoldItalicFont=*-SemiBoldItalic,
 % Define an entry of cv education
 % Usage: \cveducation{1<position>}{2<title>}{3<location>}{4<date>}{5<description>}{6<image>}
 \newcommand*{\cveducation}[6]{%
-	\vspace{-1.0mm}
+	\vspace{-0.55mm}
 	\setlength\tabcolsep{0pt}
 	\setlength{\extrarowheight}{0pt}
 	\ifempty{#6}
@@ -714,7 +714,7 @@ BoldItalicFont=*-SemiBoldItalic,
 	\setlength{\RaggedRightLeftskip}{12pt}
 	\setlength{\RaggedRightRightskip}{0pt plus 4em}
 	\RaggedRight
-	\vspace{-1.0mm}
+	\vspace{-0.55mm}
 	\presauthorsstyle{#1}. \prestitlestyle{#2}. \optionalperiod{\preseventstyle{#3}} \optionalperiod{\preslocationstyle{#4}} \optionalperiod{\presdatestyle{#5}} <<\prestypestyle{#6}>>. \ifempty{#7}{}{\href{https://doi.org/#7}{DOI: #7}}%
 	\vspace{4.0mm}
 }
@@ -725,7 +725,7 @@ BoldItalicFont=*-SemiBoldItalic,
 	\setlength{\RaggedRightLeftskip}{12pt}
 	\setlength{\RaggedRightRightskip}{0pt plus 4em}
 	\RaggedRight
-	\vspace{-1.0mm}
+	\vspace{-0.55mm}
 	\presauthorsstyle{#1}. \prestitlestyle{#2}. \optionalperiod{\preseventstyle{#3}} \optionalperiod{\presdatestyle{#4}} <<\prestypestyle{#5}>>. \ifempty{#6}{}{\href{https://doi.org/#6}{DOI: #6}}%
 	\vspace{4.0mm}
 }
@@ -794,7 +794,7 @@ BoldItalicFont=*-SemiBoldItalic,
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
 	\vspace{\acvSectionContentTopSkip}
-	\vspace{-1.0mm}
+	\vspace{-0.55mm}
 	\begin{center}
 		\setlength\tabcolsep{1ex}
 		\setlength{\extrarowheight}{0pt}

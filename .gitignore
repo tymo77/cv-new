@@ -1,4 +1,34 @@
+# LaTeX build artifacts
 *.aux
 *.log
 *.out
+*.fls
+*.fdb_latexmk
 *.synctex.gz
+*.lof
+*.lot
+*.toc
+*.bbl
+*.blg
+
+# Preview/test images
+*.png
+!images/*.png
+
+# PDF build artifacts (generated from .tex files)
+# Uncomment below if you DON'T want to track CV.pdf and Resume.pdf
+# *.pdf
+
+# Helper/temporary scripts
+*push*.sh
+*create*.sh
+*push*.py
+push-to-github-*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Build output directory
+build/
+dist/

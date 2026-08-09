@@ -1,0 +1,64 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[letterpaper, 10 pt]{mycv}
+\widowpenalties 1 10000
+\title{Tyler Morrison}
+\date{\today}
+\name{Tyler N.}{Morrison}
+\position{Physical AI Research Engineer}
+\mobile{913-944-2055}
+\email{tylermorrison7777@gmail.com}
+% \homepage{tyler-morrison.com}
+%\github{tymo77}
+%\gitlab{}
+%\stackoverflow{}
+\linkedin{tymo77}
+\google{B9aL6sUAAAAJ}
+%\twitter{}
+%\skype{}
+%\reddit{}
+%\xing{}
+%\extrainfo{}
+%\quote{``Let's see if this works.''}
+%\recipient{name}{address}
+% \photo[rectangle,right,noedge]{images/outdoor_suit_crop_head}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% Specify the location of any included fonts
+\fontdir[fonts/]
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}}
+
+\begin{document}
+	% Print the header with above personal informations
+	% Give optional argument to change alignment(C: center, L: left, R: right)
+	
+	\makecvheader[L]
+	% Print the footer with 3 arguments(<left>, <center>, <right>)
+	% Leave any of these blank if they are not needed
+	\makecvfooter{\today}{Tyler N. Morrison~~~|+|~~~Resume}{\thepage}
+%	
+%	%-------------------------------------------------------------------------------
+%	%	CV/RESUME CONTENT
+%	%	Each section is imported separately, open each file in turn to modify content
+%	%-------------------------------------------------------------------------------      
+        \\
+        \\
+        \vspace{-5mm}
+	\input{select_sections/experience_all.tex}
+	\input{select_sections/education.tex}
+	\input{select_sections/skills.tex}
+	\input{select_sections/articles.tex}
+	% \input{select_sections/conferences.tex}
+	% \input{select_sections/presentation.tex}
+	\input{select_sections/honors.tex}
+	\input{select_sections/hobbies.tex}
+	
+\end{document}

@@ -1,0 +1,32 @@
+#!/bin/bash
+# Pre-commit hook to enforce Resume.pdf is exactly 2 pages
+# Install with: git config core.hooksPath .githooks
+
+# Get page count using pdfinfo or alternative methods
+if [ -f "Resume.pdf" ]; then
+    # Try pdfinfo first
+    pages=$(pdfinfo Resume.pdf 2>/dev/null | grep Pages | awk '{print $2}')
+
+    # If pdfinfo not available, try using strings on the PDF
+    if [ -z "$pages" ]; then
+        pages=$(strings Resume.pdf | grep -o '/Type /Page' | wc -l)
+    fi
+
+    if [ -z "$pages" ] || [ "$pages" -eq 0 ]; then
+        echo "⚠️  WARNING: Could not determine page count for Resume.pdf"
+        echo "   Install poppler-utils for reliable page counting:"
+        echo "   macOS: brew install poppler"
+        echo "   Linux: apt-get install poppler-utils"
+        exit 0
+    fi
+
+    if [ "$pages" -ne 2 ]; then
+        echo "❌ ERROR: Resume.pdf must be exactly 2 pages, but it has $pages pages"
+        echo "   Please adjust spacing in mycv.cls and recompile"
+        exit 1
+    else
+        echo "✓ Resume.pdf check passed: $pages pages"
+    fi
+fi
+
+exit 0
